@@ -44,8 +44,8 @@ func InitConfig() {
 			panic(fmt.Errorf("初始化配置文件失败:%s", err))
 		}
 		// 读取rsa key
-		Conf.System.RSAPublicBytes = RSAReadKeyFromFile(Conf.System.RSAPublicKey)
-		Conf.System.RSAPrivateBytes = RSAReadKeyFromFile(Conf.System.RSAPrivateKey)
+		//Conf.System.RSAPublicBytes = RSAReadKeyFromFile(Conf.System.RSAPublicKey)
+		//Conf.System.RSAPrivateBytes = RSAReadKeyFromFile(Conf.System.RSAPrivateKey)
 	})
 
 	if err != nil {
@@ -57,8 +57,8 @@ func InitConfig() {
 	}
 	fmt.Println(Conf)
 	// 读取rsa key
-	Conf.System.RSAPublicBytes = RSAReadKeyFromFile(Conf.System.RSAPublicKey)
-	Conf.System.RSAPrivateBytes = RSAReadKeyFromFile(Conf.System.RSAPrivateKey)
+	//Conf.System.RSAPublicBytes = RSAReadKeyFromFile(Conf.System.RSAPublicKey)
+	//Conf.System.RSAPrivateBytes = RSAReadKeyFromFile(Conf.System.RSAPrivateKey)
 
 }
 
@@ -81,14 +81,14 @@ func RSAReadKeyFromFile(filename string) []byte {
 }
 
 type SystemConfig struct {
-	Mode            string `mapstructure:"mode" json:"mode"`
-	UrlPathPrefix   string `mapstructure:"url-path-prefix" json:"urlPathPrefix"`
-	Port            int    `mapstructure:"port" json:"port"`
-	InitData        bool   `mapstructure:"init-data" json:"initData"`
-	RSAPublicKey    string `mapstructure:"rsa-public-key" json:"rsaPublicKey"`
-	RSAPrivateKey   string `mapstructure:"rsa-private-key" json:"rsaPrivateKey"`
-	RSAPublicBytes  []byte `mapstructure:"-" json:"-"`
-	RSAPrivateBytes []byte `mapstructure:"-" json:"-"`
+	Mode          string `mapstructure:"mode" json:"mode"`
+	UrlPathPrefix string `mapstructure:"url-path-prefix" json:"urlPathPrefix"`
+	Port          int    `mapstructure:"port" json:"port"`
+	InitData      bool   `mapstructure:"init-data" json:"initData"`
+	//RSAPublicKey    string `mapstructure:"rsa-public-key" json:"rsaPublicKey"`
+	//RSAPrivateKey   string `mapstructure:"rsa-private-key" json:"rsaPrivateKey"`
+	//RSAPublicBytes  []byte `mapstructure:"-" json:"-"`
+	//RSAPrivateBytes []byte `mapstructure:"-" json:"-"`
 }
 
 type LogsConfig struct {
