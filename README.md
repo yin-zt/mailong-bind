@@ -1,2 +1,3 @@
-# mailong-go-vue
-my first go vue web project
+# mailong-bind
+my first go project
+this is a bind record management platform
